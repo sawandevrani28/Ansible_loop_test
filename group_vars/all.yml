@@ -1,7 +1,8 @@
     
 ---
 
-
+username: ansible
+password: testpass
 hostinfo:
   16.231.24.150: Ans-tower-dev
   
