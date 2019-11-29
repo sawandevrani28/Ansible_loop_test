@@ -1,7 +1,7 @@
 ---
 
   - name: echoing 
-    command: bash -c "echo "knife bootstrap "{{ item.key }}"  -N "{{ item.value }}" --ssh-user " >> /tmp/example.txt "
+    command: bash -c "echo "knife bootstrap "{{ item.key }}"  -N "{{ item.value }}" --ssh-user "{{ username }}" --ssh-password "{{ password }}" end " >> /tmp/example.txt "
     #environment: "{{proxy_env}}"
     with_dict: "{{ hostinfo }}"
     
