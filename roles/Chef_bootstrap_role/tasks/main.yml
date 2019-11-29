@@ -1,9 +1,9 @@
 ---
 
-  - name: bootstrapping the nodes
-    command: knife bootstrap "{{ item }}" --ssh-user "{{ username }}" --ssh-password "{{ password }}" --sudo --use-sudo-password --environment _default --bootstrap-proxy http://proxy.its.hpecorp.net:8080 https_proxy=$http_proxy
+  - name: echoing 
+    command: bash -c "echo "knife bootstrap "{{ item.key }}"  -N "{{ item.value }}" --ssh-user " >> /tmp/example.txt "
     #environment: "{{proxy_env}}"
-    with_items: "{{ hostnames }}"
+    with_dict: "{{ hostinfo }}"
     
 
 
