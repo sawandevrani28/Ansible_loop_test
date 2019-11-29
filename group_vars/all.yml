@@ -1,0 +1,13 @@
+    
+---
+
+hostnames:
+  - 16.231.24.150
+  
+username:
+password:
+proxy_env:
+      http_proxy: http://proxy.houston.hpecorp.net:8080,http://proxy.its.hpecorp.net:8080
+      no_proxy: localhost,127.0.0.1
+      https_proxy: $http_proxy
+
